@@ -1,24 +1,11 @@
-# README
+# Notes to Self:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Start the mongodb server with `$ brew services start mongodb`
 
-Things you may want to cover:
+In the rails console, to use direct mongodb syntax:
 
-* Ruby version
+* `db = Mongoid::Clients.default`
 
-* System dependencies
+* `posts_collection = db[:posts]`
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* `posts_collection.find({body: /ello/})`
